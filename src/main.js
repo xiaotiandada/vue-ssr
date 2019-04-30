@@ -22,9 +22,6 @@ export async function createApp ({
   router,
   store,
   render: h => h(App),
-  mounted () {
-    document.dispatchEvent(new Event('render-event'))
-  }
 })
 
           const result = {
