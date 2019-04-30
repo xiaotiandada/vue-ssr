@@ -1,11 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueHead from 'vue-head'
 import { createRouter } from './router'
 import { createStore } from './store'
 
 Vue.config.productionTip = false
-Vue.use(VueHead)
 export async function createApp ({
           beforeApp = () => {},
           afterApp = () => {}
