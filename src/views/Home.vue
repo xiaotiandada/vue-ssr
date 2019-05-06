@@ -10,7 +10,7 @@
 </template>
 <script>
 import { mapState } from "vuex";
-
+import axios from "axios";
 function setHead(store) {
   return store.dispatch("getMetaInfo");
 }
@@ -48,7 +48,11 @@ export default {
   computed: {
     ...mapState(["title", "des", "img"])
   },
-  created() {},
+  created() {
+    axios.get("https://apitest.smartsignature.io/posts?page=1").then(res => {
+      console.log(res);
+    });
+  },
   mounted() {},
   // 方法
   methods: {},
